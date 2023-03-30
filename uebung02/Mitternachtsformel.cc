@@ -39,6 +39,13 @@ Wenn b² -4ac negativ ist: Ausgabe: Lösung komplex
         std::cout << "Das Ergebnis ist komplex!" << std::endl;
         return 0;
     }
+     if(Diskriminante == 0)
+    {
+        std::cout << "Es gibt nur ein Ergebnis: ("  << ((( b * -1) / (2 * a))) << "/0)" << std::endl;
+
+        return 0;
+    }
+
     //Diskriminante ist legal, jetzt können wir direkt einmal die Wurzel ziehen
     Diskriminante = std::sqrt(Diskriminante);
 
