@@ -17,6 +17,7 @@ void printvector(const std::vector<double>& v)
 std::vector<double> reverse(const std::vector<double>& v)
 {
     std::vector<double> creversed(v.size());
+    
     std::cout << "Reverse-Vector Groesse: " << creversed.size() << std::endl;
 
     for (double Zaehler = 0; Zaehler < creversed.size(); Zaehler++)
@@ -63,14 +64,19 @@ int main(int argc, char** argv)
     std::vector<double> c2;  
     std::vector<double> d = {1.0,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2.0};
       
-    /*a)
+    
 
     for (int i = 0; i < a.size(); i++)
     {
         std::cout << a[i] << std::endl;
-    }*/
+    }
+    //alternativ: Range-Based for:
+    for(double i : a)
+    {
+        std::cout << i << std::endl;
+    }
 
-    /*b)
+    //b)
     double bgross = b[0];
     double bklein = b[0];
     for (size_t i = 0; i < b.size(); i++)
@@ -116,26 +122,25 @@ int main(int argc, char** argv)
     std::pair<double, double> grossklein = std::make_pair(bgross, bklein);
     std::cout << "Groesster Wert: " << grossklein.first << std::endl;
     std::cout << "Kleinster Wert: " << grossklein.second << std::endl;
-    */
 
-    /*c)
+    //c)
     //Man könnte hier auch in der main-Funktion die Reversed-Einträge mit einer Schleife
     //ausgeben, ist aber für die Aufgabenstellung irrelevant, also kommt die 
     //Ausgabe in eine eigene Funktion
     printvector(reverse(c1));
     printvector(reverse(c2));
-    */
     
-    /*d)
+    
+    //d)
     std::cout << "Ungerundet:  " << std::flush;
     printvector(d);
     
     std::cout << "Gerundet: " << std::flush;
     vrunden(d);
     printvector(d);
-    */
+    
 
-    /*e)
+    //e)
 
     umkehren(v1);
     umkehren(v4);
@@ -143,7 +148,7 @@ int main(int argc, char** argv)
     printvector(v1);
     printvector(v4);
     printvector(v2);
-    */
+    
     
     return 0;
 }
