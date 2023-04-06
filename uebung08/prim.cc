@@ -45,7 +45,6 @@ void printPrimes(int upto)
 int main(int argc, char** argv[])
 {
     std::vector<int> test = { -5, -3, 0, 1, 2, 3, 4, 5, 20, 40, 66, 67};
-    
     for(int& itest : test)
     {
         if(isPrime(itest) == true)
@@ -58,7 +57,5 @@ int main(int argc, char** argv[])
         }
         printPrimes(itest);
         std::cout << " " << std::endl;  
-    }
-
-    
+    }   
 }
