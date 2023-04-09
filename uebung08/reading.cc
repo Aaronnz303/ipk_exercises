@@ -7,7 +7,7 @@
 int potenz(int basis, int potenz)
 {
     int ergebnis = 1;
-    for(int i = 0; i <  potenz; i++)
+    for(int i = 0; i < potenz; i++)
     {
         ergebnis *= basis;
     }
